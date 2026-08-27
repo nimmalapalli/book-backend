@@ -1,0 +1,1 @@
+const mongoose=require("mongoose");module.exports=mongoose.model("Order",new mongoose.Schema({customer:String,items:[{bookId:mongoose.Schema.Types.ObjectId,title:String,qty:Number,price:Number}],total:Number,type:{type:String,enum:["rental","purchase"],default:"rental"},status:{type:String,enum:["pending","active","completed","cancelled"],default:"pending"}},{timestamps:true}));
